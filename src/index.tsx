@@ -1,15 +1,35 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { Provider } from "react-redux";
+import "./index.css";
+import store from "./redux/store";
+import reportWebVitals from "./reportWebVitals";
+import App from "./App";
+import { ErrorBoundary } from "react-error-boundary";
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
+const FallbackComponent: React.FC<{
+  error: Error;
+  resetErrorBoundary: () => void;
+}> = ({ error, resetErrorBoundary }) => {
+  return (
+    <div role="alert">
+      <p>Đã xảy ra lỗi:</p>
+      <pre>{error.message}</pre>
+      <button onClick={resetErrorBoundary}>Thử lại</button>
+    </div>
+  );
+};
+
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <ErrorBoundary FallbackComponent={FallbackComponent}>
+        <App />
+      </ErrorBoundary>
+    </Provider>
   </React.StrictMode>
 );
 

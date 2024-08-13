@@ -1,0 +1,30 @@
+.selected-row {
+  background-color: #bfbfbf; /* Màu xám nhạt */
+}
+.total-container {
+  left: -20px;
+  border: 1px solid #d9d9d9; /* Viền khung */
+  border-radius: 4px; /* Bo tròn góc */
+  padding: 2px 4px; /* Khoảng cách bên trong khung */
+  background-color: #fafafa; /* Màu nền */
+  margin-bottom: 16px; /* Khoảng cách dưới khung */
+  display: inline-block; /* Hiển thị khung như khối nội tuyến để không chiếm toàn bộ chiều rộng */
+}
+
+.custom-total {
+  color: #0f0f10; /* Màu sắc tùy chỉnh */
+  font-weight: bold; /* Định dạng chữ đậm */
+  font-size: 14px; /* Kích thước chữ tùy chỉnh */
+}
+.ant-pagination-total-text {
+  margin-right: 500px; /* Điều chỉnh giá trị này để tăng khoảng cách */
+}
+.ant-table-cell {
+  /* border: 2px; */
+  /* color: red; */
+  width: 100%;
+  min-width: 150px;
+}
+.thongtinHs {
+  color: red;
+}
