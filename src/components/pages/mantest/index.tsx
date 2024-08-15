@@ -1,10 +1,12 @@
 import React from "react";
-import TableComponents from "./Table";
+import Table2 from "../../Man1/Table2";
+import TableComponents from "../../Man1/Table";
 
 const Index = () => {
   return (
     <>
       <TableComponents />
+      <Table2 />;
     </>
   );
 };

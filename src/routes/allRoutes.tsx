@@ -7,6 +7,7 @@ import { lazy } from "react";
 const QuanLyHoSoCmnd9So = lazy(
   () => import("../components/pages/quanLyHoSoCmnd9So")
 );
+const QuanLyHoSoCmnd9So2 = lazy(() => import("../components/pages/mantest"));
 
 const allRoutes: any[] = [
   {
@@ -18,8 +19,9 @@ const allRoutes: any[] = [
     element: <QuanLyHoSoCmnd9So />,
   },
   {
-    path: `l2`,
-    element: <div>l2</div>,
+    path: `/man-1`,
+    // element: man,
+    element: <QuanLyHoSoCmnd9So2 />,
   },
   {
     path: `l3`,
